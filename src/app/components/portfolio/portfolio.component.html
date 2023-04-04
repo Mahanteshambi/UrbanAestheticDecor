@@ -1,0 +1,54 @@
+<div class="max-w-7xl mx-auto px-4 pt-10 pb-12 lg:pt-[50px] lg:pb-[50px]">
+  <div>
+    <p class="text-[#FE6244] text-3xl font-bold text-center">Our Portfolio</p>
+  </div>
+  <div class="flex items-center justify-center py-2 md:py-8 flex-wrap">
+    <button
+      type="button"
+      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
+      (click)="updateGallery('all-categories')"
+    >
+      All categories
+    </button>
+    <button
+      type="button"
+      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
+      (click)="updateGallery('shoes')"
+    >
+      Shoes
+    </button>
+    <button
+      type="button"
+      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
+      (click)="updateGallery('bags')"
+    >
+      Bags
+    </button>
+    <button
+      type="button"
+      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
+      (click)="updateGallery('electronics')"
+    >
+      Electronics
+    </button>
+    <button
+      type="button"
+      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
+      (click)="updateGallery('gaming')"
+    >
+      Gaming
+    </button>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-max">
+    <div
+      class="flex flex-col items-center"
+      *ngFor="let image of currentGallery"
+    >
+      <img
+        class="object-cover h-[300px] w-full md:w-[420px] rounded-lg"
+        src="{{ image.src }}"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
