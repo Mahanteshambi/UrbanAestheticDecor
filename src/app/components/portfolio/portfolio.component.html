@@ -1,54 +1,27 @@
-<div class="max-w-7xl mx-auto px-4 pt-10 pb-12 lg:pt-[50px] lg:pb-[50px]">
+<div
+  class="bg-[#ebebeb] max-w-7xl mx-auto px-4 pt-10 pb-12 lg:pt-[50px] lg:pb-[50px]"
+>
   <div>
     <p class="text-[#FE6244] text-3xl font-bold text-center">Our Portfolio</p>
   </div>
-  <div class="flex items-center justify-center py-2 md:py-8 flex-wrap">
-    <button
-      type="button"
-      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-      (click)="updateGallery('all-categories')"
-    >
-      All categories
-    </button>
-    <button
-      type="button"
-      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-      (click)="updateGallery('shoes')"
-    >
-      Shoes
-    </button>
-    <button
-      type="button"
-      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-      (click)="updateGallery('bags')"
-    >
-      Bags
-    </button>
-    <button
-      type="button"
-      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-      (click)="updateGallery('electronics')"
-    >
-      Electronics
-    </button>
-    <button
-      type="button"
-      class="bg-[#FE6244] my-2 sm:my-4 mx-2 text-white px-4 py-2 rounded-lg text-sm sm:text-base"
-      (click)="updateGallery('gaming')"
-    >
-      Gaming
-    </button>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-max">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-max mt-10">
     <div
-      class="flex flex-col items-center"
-      *ngFor="let image of currentGallery"
+      class="flex flex-col items-center relative"
+      *ngFor="let image of currentCategory"
     >
-      <img
-        class="object-cover h-[300px] w-full md:w-[420px] rounded-lg"
-        src="{{ image.src }}"
-        alt=""
-      />
+      <a routerLink="{{ image.link }}">
+        <img
+          class="object-cover h-[300px] w-full md:w-[420px] rounded-lg"
+          src="{{ image.src }}"
+          alt=""
+        />
+      </a>
+
+      <div
+        class="mt-4 absolute bottom-0 bg-[#FE6244] left-0 right-0 text-white text-center p-2 hover:pb-10 duration-500"
+      >
+        <p>{{ image.category }}</p>
+      </div>
     </div>
   </div>
 </div>
