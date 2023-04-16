@@ -22,6 +22,7 @@ import { TvunitComponent } from './components/tvunit/tvunit.component';
 import { LivingRoomComponent } from './components/livingRoom/livingRoom.component';
 import { BathroomComponent } from './components/bathroom/bathroom.component';
 import { WardrobeComponent } from './components/wardrobe/wardrobe.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { WardrobeComponent } from './components/wardrobe/wardrobe.component';
     BathroomComponent,
     WardrobeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, IvyCarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })
