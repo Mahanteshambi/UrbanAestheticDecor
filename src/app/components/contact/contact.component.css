@@ -1,0 +1,43 @@
+.contact-content .top-content {
+  text-align: center;
+}
+
+.c-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.c-desc {
+  opacity: 0.8;
+}
+
+.box-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box-container .box {
+  text-align: center;
+}
+
+.box-container .box .info-container {
+  display: flex;
+  align-items: center;
+}
+
+/* .box-container .box div span {
+  flex: none;
+} */
+
+.box-container .box .head {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.box-container .box div span {
+  color: rgb(153, 149, 149);
+  margin-right: 0.5rem;
+}

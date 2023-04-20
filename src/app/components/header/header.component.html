@@ -1,0 +1,65 @@
+<!-- ======= Header ======= -->
+
+<div class="bg-white shadow-lg fixed top-0 right-0 left-0 z-[100]">
+  <div class="max-w-7xl mx-auto py-2 px-4 flex items-center justify-between">
+    <a href="#" class="text-2xl font-bold text-[#FE6244]">Vastushilpa</a>
+    <div
+      [class.translate-x-[0%]]="showMenu"
+      class="p-4 md:p-0 sm:p-0 absolute translate-x-[-100%] sm:translate-x-0 duration-500 bg-white top-[65px] left-0 right-0 flex flex-col sm:block sm:static"
+    >
+      <span
+        href="#hero"
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        >Home</span
+      >
+      <span
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        href="#about"
+        >About</span
+      >
+      <span
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        href="#services"
+        >Services</span
+      >
+      <span
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        href="#portfolio"
+        >Portfolio</span
+      >
+      <span
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        href="#reviews"
+        >Reviews</span
+      >
+      <span
+        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+        href="#contact"
+        >Contact</span
+      >
+      <span href="#contact">
+        <span
+          class="bg-[#FE6244] my-4 sm:my-0 text-white ml-0 sm:ml-6 px-4 py-2 rounded-lg"
+        >
+          Get Started
+        </span>
+      </span>
+    </div>
+
+    <button (click)="handleMenu()" class="sm:hidden">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- End Header -->

@@ -1,0 +1,240 @@
+<!-- <p class="container">
+  <img
+    *ngFor="let item of items; index as i"
+    [lightbox]="i"
+    [src]="item.data.thumb"
+  />
+</p> -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Portfolio</h2>
+      <p>Check out our beautifull portfolio</p>
+    </div>
+
+    <div
+      class="row portfolio-container"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Project-1">
+          <img
+            src="../../../assets/project-1/17.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showp1()"
+          />
+          <p class="info">Project 1</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Project-2">
+          <img
+            src="../../../assets/project-2/13.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showp2()"
+          />
+          <p class="info">Project 2</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Project-3">
+          <img
+            src="../../../assets/project-3/14.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showp3()"
+          />
+          <p class="info">Project 3</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Bedroom">
+          <img
+            src="../../../assets/bedroom/16.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showBedroom()"
+          />
+          <p class="info">Bedroom</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Kitchen">
+          <img
+            src="../../../assets/kitchen/10.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showKitchen()"
+          />
+          <p class="info">Kitchen</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap Tv-unit">
+          <img
+            src="../../../assets/tv-unit/1.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showTvUnit()"
+          />
+          <p class="info">TV Unit</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap living-room">
+          <img
+            src="../../../assets/living-room/14.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showLivingRoom()"
+          />
+          <p class="info">Living Room</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap bathroom">
+          <img
+            src="../../../assets/bathroom/4.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showBathroom()"
+          />
+          <p class="info">Bathroom</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap wardobe">
+          <img
+            src="../../../assets/wardrobe/11.jpg"
+            class="img-fluid"
+            alt=""
+            (click)="showWardobe()"
+          />
+          <p class="info">Wardobe</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div *ngFor="let item of project_one; index as i" class="Project-1">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'p1'"
+    alt=""
+    style="display: none"
+    id="p1"
+  />
+</div>
+
+<div *ngFor="let item of project_one; index as i" class="Project-1">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'p2'"
+    alt=""
+    style="display: none"
+    id="p2"
+  />
+</div>
+
+<div *ngFor="let item of project_three; index as i" class="Project-1">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'p3'"
+    alt=""
+    style="display: none"
+    id="p3"
+  />
+</div>
+
+<div *ngFor="let item of bedroom; index as i" class="Bedroom">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'bedroom'"
+    alt=""
+    style="display: none"
+    id="bedroom"
+  />
+</div>
+
+<div *ngFor="let item of kitchen; index as i" class="Kitchen">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'kitchen'"
+    alt=""
+    style="display: none"
+    id="kitchen"
+  />
+</div>
+
+<div *ngFor="let item of tv_unit; index as i" class="Tv-unit">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'tv-unit'"
+    alt=""
+    style="display: none"
+    id="tv-unit"
+  />
+</div>
+
+<div *ngFor="let item of living_room; index as i" class="living-room">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'living-room'"
+    alt=""
+    style="display: none"
+    id="living-room"
+  />
+</div>
+
+<div *ngFor="let item of bathroom; index as i" class="bathroom">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'bathroom'"
+    alt=""
+    style="display: none"
+    id="bathroom"
+  />
+</div>
+
+<div *ngFor="let item of wardobe; index as i" class="wardobe">
+  <img
+    [lightbox]="i"
+    src="{{ item.data.thumb }}"
+    class="img-fluid"
+    [gallery]="'wardobe'"
+    alt=""
+    style="display: none"
+    id="wardobe"
+  />
+</div>
+<!-- End Portfolio Section -->

@@ -1,0 +1,30 @@
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.review-container .review {
+  background-color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.review-container .review .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.review-container .review .rating {
+  margin-bottom: 1rem;
+}
+
+.review-container .review .rating span {
+  color: #ff9529;
+}
+
+.review-container .review .description {
+  opacity: 0.8;
+}

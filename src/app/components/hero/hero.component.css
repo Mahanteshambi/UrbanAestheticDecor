@@ -1,0 +1,26 @@
+swiper {
+  height: 100vh;
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#hero {
+  margin: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-button-next {
+  margin-right: 2rem;
+}
+.swiper-button-prev {
+  margin-left: 2rem;
+}
