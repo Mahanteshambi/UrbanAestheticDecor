@@ -1,6 +1,7 @@
-swiper {
-  height: 100vh;
+.swiper {
+  height: 80vh;
   width: 100%;
+  margin-bottom: 0;
 }
 
 .swiper-slide img {

@@ -31,49 +31,41 @@ export class PortfolioComponent implements OnInit {
   living_room: GalleryItem[];
   // @ts-ignore
   wardobe: GalleryItem[];
+
   constructor(public gallery: Gallery) {}
 
   ngOnInit(): void {
     // 1. Create gallery project_one
-    this.project_one = project_one.map(
+    this.project_one = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.project_two = project_two.map(
+    this.project_two = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.project_three = project_three.map(
+    this.project_three = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.bedroom = bedroom.map(
+    this.bedroom = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.kitchen = kitchen.map(
+    this.kitchen = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.tv_unit = tv_unit.map(
+    this.tv_unit = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.living_room = living_room.map(
+    this.living_room = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.bathroom = bathroom.map(
+    this.bathroom = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
-    this.wardobe = wardobe.map(
+    this.wardobe = galleryInit.map(
       (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
     );
-
     // Load item into different lightbox instance
     // With custom gallery config
-    this.withCustomGalleryConfig();
+    // this.withCustomGalleryConfig();
   }
 
   /**
@@ -158,13 +150,22 @@ export class PortfolioComponent implements OnInit {
   }
 
   showp1() {
+    this.project_one = project_one.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
     // @ts-ignore
-    document.getElementById('p1').hidden = true;
+    // document.getElementById('p1').hidden = true;
     // @ts-ignore
     document.getElementById('p1').click();
   }
 
   showp2() {
+    this.project_two = project_two.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('p2').hidden = true;
     // @ts-ignore
@@ -172,6 +173,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showp3() {
+    this.project_three = project_three.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('p3').hidden = true;
     // @ts-ignore
@@ -179,6 +185,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showBedroom() {
+    this.bedroom = bedroom.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('bedroom').hidden = true;
     // @ts-ignore
@@ -186,6 +197,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showKitchen() {
+    this.kitchen = kitchen.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('kitchen').hidden = true;
     // @ts-ignore
@@ -193,6 +209,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showTvUnit() {
+    this.tv_unit = tv_unit.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('tv-unit').hidden = true;
     // @ts-ignore
@@ -200,6 +221,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showLivingRoom() {
+    this.living_room = living_room.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('living-room').hidden = true;
     // @ts-ignore
@@ -207,6 +233,11 @@ export class PortfolioComponent implements OnInit {
   }
 
   showBathroom() {
+    this.bathroom = bathroom.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('bathroom').hidden = true;
     // @ts-ignore
@@ -214,12 +245,24 @@ export class PortfolioComponent implements OnInit {
   }
 
   showWardobe() {
+    this.wardobe = wardobe.map(
+      (item) => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl })
+    );
+    this.withCustomGalleryConfig();
+
     // @ts-ignore
     document.getElementById('wardobe').hidden = true;
     // @ts-ignore
     document.getElementById('wardobe').click();
   }
 }
+
+const galleryInit = [
+  {
+    srcUrl: '../../../assets/project-1/1.jpg',
+    previewUrl: '../../../assets/project-1/1.jpg',
+  },
+];
 
 const project_one = [
   {

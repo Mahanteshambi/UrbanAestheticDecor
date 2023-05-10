@@ -5,45 +5,59 @@
     <a href="#" class="text-2xl font-bold text-[#FE6244]">Vastushilpa</a>
     <div
       [class.translate-x-[0%]]="showMenu"
-      class="p-4 md:p-0 sm:p-0 absolute translate-x-[-100%] sm:translate-x-0 duration-500 bg-white top-[65px] left-0 right-0 flex flex-col sm:block sm:static"
+      [class.translate-x-[-100%]]="hideMenu"
+      class="p-4 md:p-0 sm:p-0 absolute translate-x-[-100%] sm:translate-x-0 duration-500 bg-white top-[65px] left-0 right-0 flex flex-col sm:block sm:static menuItems"
     >
-      <span
-        href="#hero"
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        >Home</span
-      >
-      <span
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        href="#about"
-        >About</span
-      >
-      <span
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        href="#services"
-        >Services</span
-      >
-      <span
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        href="#portfolio"
-        >Portfolio</span
-      >
-      <span
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        href="#reviews"
-        >Reviews</span
-      >
-      <span
-        class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
-        href="#contact"
-        >Contact</span
-      >
-      <span href="#contact">
+      <a onclick="sethideMenu()" href="#home">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500 cursor-pointer"
+          >Home</span
+        >
+      </a>
+
+      <a href="#about">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+          href="#about"
+          >About</span
+        >
+      </a>
+
+      <a href="#services">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+          >Services</span
+        >
+      </a>
+
+      <a href="#portfolio">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+          >Portfolio</span
+        >
+      </a>
+
+      <a href="#reviews">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+          >Reviews</span
+        >
+      </a>
+
+      <a href="#contact">
+        <span
+          class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
+          >Contact</span
+        >
+      </a>
+
+      <a href="#contact">
         <span
           class="bg-[#FE6244] my-4 sm:my-0 text-white ml-0 sm:ml-6 px-4 py-2 rounded-lg"
         >
           Get Started
         </span>
-      </span>
+      </a>
     </div>
 
     <button (click)="handleMenu()" class="sm:hidden">
