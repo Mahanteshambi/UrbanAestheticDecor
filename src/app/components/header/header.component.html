@@ -5,17 +5,16 @@
     <a href="#" class="text-2xl font-bold text-[#FE6244]">Vastushilpa</a>
     <div
       [class.translate-x-[0%]]="showMenu"
-      [class.translate-x-[-100%]]="hideMenu"
       class="p-4 md:p-0 sm:p-0 absolute translate-x-[-100%] sm:translate-x-0 duration-500 bg-white top-[65px] left-0 right-0 flex flex-col sm:block sm:static menuItems"
     >
-      <a onclick="sethideMenu()" href="#home">
+      <a (click)="sethideMenu()" href="#home" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500 cursor-pointer"
           >Home</span
         >
       </a>
 
-      <a href="#about">
+      <a (click)="sethideMenu()" href="#about" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
           href="#about"
@@ -23,35 +22,35 @@
         >
       </a>
 
-      <a href="#services">
+      <a (click)="sethideMenu()" href="#services" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
           >Services</span
         >
       </a>
 
-      <a href="#portfolio">
+      <a (click)="sethideMenu()" href="#portfolio" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
           >Portfolio</span
         >
       </a>
 
-      <a href="#reviews">
+      <a (click)="sethideMenu()" href="#reviews" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
           >Reviews</span
         >
       </a>
 
-      <a href="#contact">
+      <a (click)="sethideMenu()" href="#contact" class="py-1">
         <span
           class="py-2 sm:py-0 text-base mx-2 hover:text-[#FE6244] duration-500"
           >Contact</span
         >
       </a>
 
-      <a href="#contact">
+      <a (click)="sethideMenu()" href="#contact" class="py-1">
         <span
           class="bg-[#FE6244] my-4 sm:my-0 text-white ml-0 sm:ml-6 px-4 py-2 rounded-lg"
         >

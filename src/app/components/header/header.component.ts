@@ -8,7 +8,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   showMenu: boolean = false;
-  hideMenu: boolean = true;
+  hideMenu: boolean = false;
 
   constructor() {}
 
@@ -21,7 +21,6 @@ export class HeaderComponent implements OnInit {
 
   sethideMenu() {
     console.log('hello');
-
-    this.hideMenu = false;
+    this.showMenu = false;
   }
 }
